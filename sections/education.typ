@@ -1,22 +1,13 @@
 #import "../template/theme.typ": *
 
-#section("Education")
+#section("EDUCATION")
 
 #entry(
-  "42 School",
-  "Full-Stack Software Development Program",
-  "2023 - 2025",
+  "42 Lisboa",
+  "Software Development · Systems & Network Programming Specialisation",
+  "Oct 2023 - May 2025 · Lisbon, Portugal",
   [
-    - Rigorous project-based learning in systems programming and algorithms
-    - Completed core curriculum in C, C++, and full-stack development
-  ]
-)
-
-#entry(
-  "42 School",
-  "Specialization in Systems kernel and Network Programming",
-  "2023 - 2025",
-  [
-    - Focused projects on Linux kernel, network protocols, and performance optimization
+    - Project-based curriculum covering C/C++, operating systems, networking, algorithms, and full-stack development
+    - Advanced focus on Linux internals and network protocol implementation
   ]
 )

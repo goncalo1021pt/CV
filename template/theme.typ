@@ -1,54 +1,102 @@
-// Theme Configuration for CV
-
-// Page setup - professional margins
+// ─────────────────────────────────────────────────────────────
+// Page
+// ─────────────────────────────────────────────────────────────
 #set page(
-  margin: (x: 2cm, y: 1.5cm),
-  paper: "a4"
+  paper: "a4",
+  margin: (x: 1.7cm, y: 1.3cm),
 )
 
-// Typography - clean and readable
+// ─────────────────────────────────────────────────────────────
+// Typography
+// ─────────────────────────────────────────────────────────────
 #set text(
-  font: "DejaVu Sans",
-  size: 11pt,
-  lang: "en"
+  font: ("Lora", "Georgia", "serif"),
+  size: 10pt,
+  lang: "en",
+  fill: rgb("#1e1e1e"),
 )
 
-// Color scheme - professional and modern
-#let primary = rgb("#1f4e79")
-#let accent = rgb("#c55a11")
-#let text-light = rgb("#444444")
-
-// Paragraph spacing
 #set par(
-  leading: 0.6em,
-  spacing: 0.6em
+  leading: 0.50em,
+  spacing: 0em,
 )
 
-// Section header styling
-#let section(title) = [
-  #v(0.8em)
-  #text(weight: "bold", size: 13pt, fill: primary)[#title]
-  #line(length: 100%, stroke: 1.5pt + primary)
-  #v(0.4em)
-]
+// ─────────────────────────────────────────────────────────────
+// Palette
+// ─────────────────────────────────────────────────────────────
+#let ink      = rgb("#1e1e1e")
+#let accent   = rgb("#3A5F87")   // engineering blue
+#let dim      = rgb("#555555")
+#let hairline = rgb("#cfd4d9")
 
-// Job/Project entry with title, subtitle, date, and description
-#let entry(title, subtitle, date, body) = [
-  #grid(
+// ─────────────────────────────────────────────────────────────
+// Section Header
+// ─────────────────────────────────────────────────────────────
+#let section(title) = {
+  v(0.0em)
+
+  grid(
+    columns: (auto, 1fr),
+    column-gutter: 0.6em,
+    align: horizon,
+
+    text(
+      font: ("Poppins", "TeX Gyre Heros", "sans-serif"),
+      weight: "semibold",
+      size: 9pt,
+      fill: accent,
+    )[#title],
+
+    line(stroke: 0.6pt + hairline),
+  )
+
+  v(0.1em)
+}
+
+// ─────────────────────────────────────────────────────────────
+// Entry Block
+// ─────────────────────────────────────────────────────────────
+#let entry(title, subtitle, date, body) = {
+
+  grid(
     columns: (1fr, auto),
-    column-gutter: 0.5em,
+    column-gutter: 0.6em,
+    align: top,
+
     [
-      #text(weight: "bold", fill: text-light)[#title]
+      #text(
+        font: ("Poppins", "TeX Gyre Heros", "sans-serif"),
+        weight: "bold",
+        size: 10pt,
+        fill: ink,
+      )[#title]
+
       #if subtitle != "" [
-        \ #text(style: "italic", size: 10pt, fill: rgb("#666"))[#subtitle]
+        #h(0.3em)
+        #text(
+          size: 9pt,
+          fill: dim,
+        )[#subtitle]
       ]
     ],
-    [#text(size: 10pt, fill: primary, weight: "bold")[#date]]
-  )
-  #v(0.2em)
-  #body
-  #v(0.6em)
-]
 
-// Bullet point styling for consistency
-#set list(marker: "•")
+    text(
+      font: ("Poppins", "TeX Gyre Heros", "sans-serif"),
+      size: 8.3pt,
+      fill: dim,
+    )[#date],
+  )
+
+  v(0.1em)
+  body
+  v(0.25em)
+}
+
+// ─────────────────────────────────────────────────────────────
+// Lists
+// ─────────────────────────────────────────────────────────────
+#set list(
+  marker: text(fill: accent, size: 8pt)[•],
+  indent: 0.45em,
+  body-indent: 0.5em,
+)

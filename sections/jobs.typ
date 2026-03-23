@@ -1,25 +1,25 @@
 #import "../template/theme.typ": *
 
-#section("Professional experience")
+#section("EXPERIENCE")
 
 #entry(
+  "Embedded Software Engineer",
   "Streambow",
-  "Embedded Software and Network Developer Intern",
-  "Dec/2025 - Present", 
+  "Dec 2025 - Present · Sintra, Portugal",
   [
-    - Developed and optimized embedded software for real-time data processing in C
-    - Implemented network communication protocols and signal handling
-    - Collaborated on performance tuning and debugging of low-level systems
+    - Develop embedded C software for telecom network gateway devices running embedded Linux
+    - Implement and integrate containerised components using Docker within network diagnostics pipelines
+    - Debug networking behaviour through low-level system and packet analysis
   ]
 )
 
 #entry(
+  "Student Supervisor",
   "42 Lisboa",
-  "Student supervisor",
-  "Aug/2024 - Oct/2025",
+  "Jul 2024 - Oct 2024 · Lisbon, Portugal",
   [
-    - Mentored students in C programming, algorithms, and project development
-    - Provided guidance on debugging, code optimization, and systems design
-    - Facilitated workshops on network programming and Linux systems
+    - Reviewed and evaluated C and systems programming projects ensuring specification compliance
+    - Delivered technical presentations to audiences of 100+ students
+    - Coordinated staff workflows supporting student progress initiatives
   ]
 )
