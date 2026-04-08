@@ -28,6 +28,8 @@
     #h(1.2em)
     #link("https://github.com/goncalo1021pt")[Github]
     #h(1.2em)
+    #link("https://goncalo1021pt.github.io")[Portfolio]
+    #h(1.2em)
     #link("https://www.linkedin.com/in/goncalo-santos-pereira-3a5080187")[LinkedIn]
     #h(1.2em)
     +351 925 526 272
