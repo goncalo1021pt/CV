@@ -8,7 +8,7 @@
   "Dec 2025 - Present · Sintra, Portugal",
   [
     - Develop embedded C software for telecom network gateway devices running embedded Linux
-    - Implement and integrate containerised components using Docker within network diagnostics pipelines
+    - Integrate containerised components with Docker into network diagnostics pipelines
     - Debug networking behaviour through low-level system and packet analysis
   ]
 )
