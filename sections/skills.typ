@@ -10,7 +10,7 @@
 #grid(
   columns: (auto, 1fr),
   column-gutter: 0.7em,
-  row-gutter: 0.5em,
+  row-gutter: sp.row,
 
   ..skill("Languages",     [C, C++, Go, Python, Rust, JavaScript/TypeScript, x86-64 Assembly, Bash, SQL]),
   ..skill("Systems",       [Embedded Linux, Linux internals, syscalls, signals, process and memory management]),

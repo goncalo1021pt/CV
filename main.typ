@@ -42,12 +42,16 @@
   ]
 ]
 
-#v(0.55em)
+#v(0.7em)
 
-#text(size: 9.6pt, fill: dim)[
-  Embedded software engineer working in C on telecom network gateways running embedded Linux.
-  Background in systems and network programming from 42 Lisboa, and hands-on experience designing,
-  shipping and operating a production Go service with its own CI, deployment and monitoring.
+// Running prose, so it gets looser leading than the bullet lists, whose
+// tighter `sp.line` is there to distinguish a wrapped line from a new item.
+#par(leading: 0.74em)[
+  #text(size: 9.6pt, fill: dim)[
+    Embedded software engineer working in C on telecom network gateways running embedded Linux.
+    Background in systems and network programming from 42 Lisboa, and hands-on experience designing,
+    shipping and operating a production Go service with its own CI, deployment and monitoring.
+  ]
 ]
 
 #include "sections/jobs.typ"
@@ -59,9 +63,12 @@
 // Footer Languages
 // ─────────────────────────────────────────────────────────────
 #v(1fr)
+// Fixed gap on top of the 1fr, so the footer keeps its breathing room
+// even when the page is completely full and the 1fr collapses to zero.
+#v(sp.section)
 #line(length: 100%, stroke: 0.5pt + hairline)
 
-#v(0em)
+#v(0.55em)
 
 #align(center)[
   #text(

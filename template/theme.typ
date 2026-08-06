@@ -13,6 +13,30 @@
 #let serif = ("Lora", "Georgia", "serif")
 
 // ─────────────────────────────────────────────────────────────
+// Vertical rhythm
+// ─────────────────────────────────────────────────────────────
+// Every gap in the document comes from here, so the spacing can be
+// reasoned about as a scale rather than as magic numbers scattered
+// across the template.
+//
+// `line` and `bullet` are the important pair. Block spacing is set to
+// zero (each block below places its own space explicitly), which makes a
+// bullet list "tight" — and a tight list takes the gap between items
+// from `leading`. That made the space between two separate bullets
+// identical to the space between the wrapped lines of a single bullet,
+// so a two-line bullet read as two bullets. `bullet` is therefore set
+// explicitly and deliberately larger than `line`.
+#let sp = (
+  line:    0.60em,   // between wrapped lines within one bullet
+  bullet:  0.84em,   // between separate bullets
+  title:   0.50em,   // entry title down to its bullets
+  entry:   0.98em,   // between entries
+  section: 1.25em,   // above a section heading
+  rule:    0.55em,   // section rule down to the first entry
+  row:     0.68em,   // between rows of the skills table
+)
+
+// ─────────────────────────────────────────────────────────────
 // Document configuration
 // ─────────────────────────────────────────────────────────────
 // These have to live inside a show rule, not at this file's top level.
@@ -34,7 +58,7 @@
   )
 
   set par(
-    leading: 0.70em,
+    leading: sp.line,
     spacing: 0em,
     justify: false,
   )
@@ -42,7 +66,8 @@
   set list(
     marker: text(fill: accent, size: 7.5pt)[•],
     indent: 0.45em,
-    body-indent: 0.5em,
+    body-indent: 0.55em,
+    spacing: sp.bullet,
   )
 
   show link: set text(fill: accent)
@@ -54,7 +79,7 @@
 // Section Header
 // ─────────────────────────────────────────────────────────────
 #let section(title) = {
-  v(0.9em)
+  v(sp.section)
 
   grid(
     columns: (auto, 1fr),
@@ -74,7 +99,7 @@
     line(length: 100%, stroke: 0.6pt + hairline),
   )
 
-  v(0.4em)
+  v(sp.rule)
 }
 
 // ─────────────────────────────────────────────────────────────
@@ -100,7 +125,7 @@
     text(font: sans, size: 8.2pt, fill: dim)[#date],
   )
 
-  v(0.45em)
+  v(sp.title)
   body
-  v(0.9em)
+  v(sp.entry)
 }
