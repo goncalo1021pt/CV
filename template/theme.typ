@@ -29,10 +29,10 @@
 #let sp = (
   line:    0.60em,   // between wrapped lines within one bullet
   bullet:  0.84em,   // between separate bullets
-  title:   0.50em,   // entry title down to its bullets
+  title:   0.72em,   // entry title down to its bullets
   entry:   0.98em,   // between entries
-  section: 1.25em,   // above a section heading
-  rule:    0.55em,   // section rule down to the first entry
+  section: 1.30em,   // above a section heading
+  rule:    0.70em,   // section rule down to the first entry
   row:     0.68em,   // between rows of the skills table
 )
 
@@ -79,7 +79,10 @@
 // Section Header
 // ─────────────────────────────────────────────────────────────
 #let section(title) = {
-  v(sp.section)
+  // Weak: collapses with the trailing space of the entry above rather
+  // than adding to it, so every section heading gets the same gap
+  // whether it follows an entry or a paragraph.
+  v(sp.section, weak: true)
 
   grid(
     columns: (auto, 1fr),
@@ -127,5 +130,5 @@
 
   v(sp.title)
   body
-  v(sp.entry)
+  v(sp.entry, weak: true)
 }
