@@ -8,26 +8,67 @@
   "2025",
   [
     - Reimplemented ping and traceroute using raw sockets and handcrafted ICMP packets
-    - Implemented TTL control, checksum computation, and round-trip timing without libc abstractions
+    - Implemented TTL control, checksum computation and round-trip timing without libc abstractions
   ]
 )
 
 #entry(
-  "ft_transcendence",
-  "Django · WebSockets · PostgreSQL · Docker",
+  "malloc",
+  "C · Memory Management · mmap · pthreads",
   "2025",
   [
-    - Developed real-time multiplayer platform using WebSockets and Django backend
-    - Implemented OAuth2 authentication, JWT, and containerised deployment
+    - Thread-safe drop-in replacement for malloc, free, realloc and calloc, built over mmap
+    - Pre-allocated TINY/SMALL/LARGE zones, mutex-guarded metadata, allocation-map debug tooling
   ]
 )
 
-// #entry(
-//   "Minishell (Unix Shell Implementation)",
-//   "C · Process Management · Parsing",
-//   "2024",
-//   [
-//     - Built POSIX-style shell supporting pipes, redirections, and environment handling
-//     - Designed tokenizer and AST-based execution pipeline managing fork/exec workflows
-//   ]
-// )
+#entry(
+  "Minishell",
+  "C · Process Management · Signals · Parsing",
+  "2024",
+  [
+    - Built a POSIX-style shell with pipes, redirections, built-ins, environment handling and job signals
+    - Designed a tokeniser and AST-based execution pipeline driving fork/exec workflows
+  ]
+)
+
+#entry(
+  "ft_irc",
+  "C++ · TCP Sockets · poll() · Protocol Design",
+  "2024",
+  [
+    - Built an IRCv3 server handling many concurrent clients from a single poll() loop over non-blocking sockets
+    - Implemented channels, operator modes and command parsing; validated against real clients
+  ]
+)
+
+#entry(
+  "dune",
+  "C++ · Systems Architecture · State Machines",
+  "2026",
+  [
+    - Designing a 45k-line C++ engine for a complex turn-based board game
+    - Phase state machine and event bus, with interaction adapters for TTY, scripted and recorded play
+  ]
+)
+
+#entry(
+  [Quest Board #text(size: 8pt, fill: dim)[· #link("https://dnd.fontao.net")[dnd.fontao.net]]],
+  "Go · PostgreSQL · React · OpenAPI · Docker",
+  "2026",
+  [
+    - Designed, shipped and operate a production web app: a React SPA compiled into a single Go binary
+    - Contract-first API — one OpenAPI spec generates the Go server interface and the typed TS client
+    - OAuth2, local accounts and TOTP 2FA; CI-gated merges, staging and production deploy pipelines
+  ]
+)
+
+#entry(
+  "Homelab Observability",
+  "Prometheus · Grafana · Docker Compose",
+  "2026",
+  [
+    - Monitoring stack for the above: application, host and per-container metrics, 30-day retention
+    - Alert rules provisioned as code; Grafana behind Cloudflare Access, Prometheus never public
+  ]
+)

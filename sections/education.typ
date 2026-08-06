@@ -4,10 +4,10 @@
 
 #entry(
   "42 Lisboa",
-  "Software Development · Systems & Network Programming Specialisation",
+  "Software Development · Systems & Network Programming",
   "Oct 2023 - May 2025 · Lisbon, Portugal",
   [
-    - Project-based curriculum covering C/C++, operating systems, networking, algorithms, and full-stack development
-    - Advanced focus on Linux internals and network protocol implementation
+    - Project-based curriculum covering C/C++, operating systems, networking and algorithms
+    - Specialisations in Linux internals and network protocols, and in cybersecurity and reverse engineering
   ]
 )
