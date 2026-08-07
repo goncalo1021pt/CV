@@ -33,16 +33,6 @@
 )
 
 #entry(
-  "ft_irc",
-  "C++ · TCP Sockets · poll() · Protocol Design",
-  "2024",
-  [
-    - Built an IRCv3 server handling many concurrent clients from a single poll() loop over non-blocking sockets
-    - Implemented channels, operator modes and command parsing; validated against real clients
-  ]
-)
-
-#entry(
   "dune",
   "C++ · Systems Architecture · State Machines",
   "2026",
