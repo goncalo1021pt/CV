@@ -49,8 +49,9 @@
 #par(leading: 0.74em)[
   #text(size: 9.6pt, fill: dim)[
     Embedded software engineer working in C on telecom network gateways running embedded Linux.
-    Background in systems and network programming from 42 Lisboa, and hands-on experience designing,
-    shipping and operating a production Go service with its own CI, deployment and monitoring.
+    Completing an RNCP Level 7 specialisation in systems and kernel programming at 42 Lisboa, alongside
+    hands-on experience designing, shipping and operating a production Go service with its own CI,
+    deployment and monitoring.
   ]
 ]
 
