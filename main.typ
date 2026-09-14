@@ -27,18 +27,18 @@
 
   #v(0.5em)
 
-  #text(size: 9pt, fill: dim)[
+  #text(size: 8.6pt, fill: dim)[
     #link("mailto:goncalo.pereira.1021@gmail.com")[goncalo.pereira.1021\@gmail.com]
-    #h(1.2em)
-    #link("https://github.com/goncalo1021pt")[Github]
-    #h(1.2em)
-    #link("https://goncalo.fontao.net")[Portfolio]
-    #h(1.2em)
+    #h(0.75em)
+    #link("https://github.com/goncalo1021pt")[github.com/goncalo1021pt]
+    #h(0.75em)
+    #link("https://goncalo.fontao.net")[goncalo.fontao.net]
+    #h(0.75em)
     #link("https://www.linkedin.com/in/goncalo-santos-pereira-3a5080187")[LinkedIn]
-    #h(1.2em)
+    #h(0.75em)
     +351 925 526 272
-    #h(1.2em)
-    Lisbon, Portugal
+    #h(0.75em)
+    Lisbon, PT
   ]
 ]
 
@@ -49,7 +49,7 @@
 #par(leading: 0.74em)[
   #text(size: 9.6pt, fill: dim)[
     Systems developer working in C on the packet path of telecom gateways — raw-socket diagnostics, kernel
-    modules in the receive path, netlink routing. I also ship and operate a production Go service.
+    modules in the receive path, netlink routing. Also ships and runs a production Go service on a home server.
   ]
 ]
 

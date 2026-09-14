@@ -25,12 +25,21 @@
 )
 
 #entry(
+  "Dune Engine",
+  "C++ · 45k lines · Systems Architecture",
+  "2026 · in progress",
+  [
+    - Turn-based board-game engine: phase state machine, event bus, and adapters for TTY and scripted play
+  ]
+)
+
+#entry(
   "42 Lisboa Projects",
-  "C · Rust · Go · x86-64 Assembly",
+  "C · Go · x86-64 Assembly · Rust",
   "2023 - 2026",
   [
-    - #text(weight: "semibold")[Networking] — ping and traceroute rebuilt on raw sockets and handcrafted ICMP — TTL control, checksums and round-trip timing without libc abstractions
+    - #text(weight: "semibold")[Networking] — ping and traceroute rebuilt on raw sockets: handcrafted ICMP, TTL control, RTT timing
     - #text(weight: "semibold")[Systems] — a thread-safe malloc over mmap; a POSIX shell driving fork/exec, pipes, redirections and job signals from an AST; a C standard library and x86-64 assembly primitives from scratch
-    - #text(weight: "semibold")[Security] — an ARP-spoofing MITM inspector and a TOTP generator in Go, a Tor hidden service, binary reverse engineering, and a ransomware simulation in Rust
+    - #text(weight: "semibold")[Security] — an ARP-spoofing MITM inspector and a TOTP generator in Go, a Tor hidden service, binary reverse engineering, and an educational ransomware simulation in Rust
   ]
 )
