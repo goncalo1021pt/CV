@@ -23,7 +23,7 @@
     size: 9pt,
     fill: accent,
     tracking: 0.3pt,
-  )[Embedded Systems · Network Programming · Backend Development]
+  )[Network Systems · Linux Kernel Internals · Backend Development]
 
   #v(0.5em)
 
@@ -48,10 +48,11 @@
 // tighter `sp.line` is there to distinguish a wrapped line from a new item.
 #par(leading: 0.74em)[
   #text(size: 9.6pt, fill: dim)[
-    Embedded software engineer working in C on telecom network gateways running embedded Linux.
-    Completing an RNCP Level 7 specialisation in systems and kernel programming at 42 Lisboa, alongside
-    hands-on experience designing, shipping and operating a production Go service with its own CI,
-    deployment and monitoring.
+    Systems developer working in C on the packet path of telecom operator gateways: raw-socket network
+    diagnostics, Linux kernel modules in the receive path and netlink-driven routing, shipped across seven
+    OEM platforms. Completing an RNCP Level 7 specialisation in systems and kernel programming at 42 Lisboa,
+    and separately design, ship and operate a production Go service with its own CI and Prometheus/Grafana
+    monitoring.
   ]
 ]
 

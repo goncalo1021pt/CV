@@ -12,10 +12,10 @@
   column-gutter: 0.7em,
   row-gutter: sp.row,
 
-  ..skill("Languages",     [C, C++, Go, Python, Rust, JavaScript/TypeScript, x86-64 Assembly, Bash, SQL]),
-  ..skill("Systems",       [Embedded Linux, Linux internals, syscalls, signals, process and memory management]),
-  ..skill("Networking",    [Raw sockets, TCP/IP, ICMP, protocol implementation, packet analysis (Wireshark, tcpdump)]),
-  ..skill("Backend",       [Go (chi, sqlc, pgx), PostgreSQL, REST and OpenAPI, Django, WebSockets, OAuth2/JWT/TOTP]),
-  ..skill("Infrastructure",[Docker, Kubernetes (K3s), Prometheus, Grafana, GitHub Actions CI/CD, NGINX]),
-  ..skill("Tooling",       [Git, GDB, Valgrind, Make, contract-driven code generation]),
+  ..skill("Languages",     [C, Go, Rust, C++, Python, x86-64 Assembly, Bash, SQL, TypeScript]),
+  ..skill("Networking",    [Raw sockets, TCP/IP, ICMP, netlink/libnl, MQTT, packet analysis (Wireshark, tcpdump)]),
+  ..skill("Linux",         [Kernel modules, receive path, syscalls, signals, threads, memory management, cross-compilation]),
+  ..skill("Observability", [Prometheus, Grafana, metrics instrumentation, alerting as code]),
+  ..skill("Backend",       [Go (chi, sqlc, pgx), PostgreSQL, REST and OpenAPI, WebSockets, OAuth2/JWT/TOTP]),
+  ..skill("Infrastructure",[Docker, Kubernetes (K3s), GitHub Actions CI/CD, NGINX, Git, GDB, Valgrind]),
 )

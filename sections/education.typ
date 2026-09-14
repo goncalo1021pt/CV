@@ -2,21 +2,14 @@
 
 #section("EDUCATION")
 
+// One school, one entry. The single Oct 2023 - Present range covers the
+// common core and the specialisation that follows it, which keeps the
+// timeline continuous into Streambow without spending a second entry on it.
 #entry(
   "42 Lisboa",
   "Systems & Kernel Specialisation · RNCP Level 7 (Master's equivalent)",
-  "May 2025 - Present · Lisbon, Portugal",
+  "Oct 2023 - Present · Lisbon, Portugal",
   [
-    - Post-common-core specialisation in systems and kernel programming, assessed entirely through projects
-    - Covers network protocol implementation, memory allocators, x86-64 assembly and a cybersecurity track
-  ]
-)
-
-#entry(
-  "42 Lisboa",
-  "Common Core · Software Development",
-  "Oct 2023 - May 2025 · Lisbon, Portugal",
-  [
-    - Project-based curriculum covering C/C++, operating systems, networking and algorithms
+    - Common core followed by a post-core specialisation, assessed entirely through projects: network protocol implementation, memory allocators, x86-64 assembly and a cybersecurity track
   ]
 )
