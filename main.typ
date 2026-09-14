@@ -48,11 +48,8 @@
 // tighter `sp.line` is there to distinguish a wrapped line from a new item.
 #par(leading: 0.74em)[
   #text(size: 9.6pt, fill: dim)[
-    Systems developer working in C on the packet path of telecom operator gateways: raw-socket network
-    diagnostics, Linux kernel modules in the receive path and netlink-driven routing, shipped across seven
-    OEM platforms. Completing an RNCP Level 7 specialisation in systems and kernel programming at 42 Lisboa,
-    and separately design, ship and operate a production Go service with its own CI and Prometheus/Grafana
-    monitoring.
+    Systems developer working in C on the packet path of telecom gateways — raw-socket diagnostics, kernel
+    modules in the receive path, netlink routing. I also ship and operate a production Go service.
   ]
 ]
 
