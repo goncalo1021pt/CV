@@ -7,7 +7,7 @@
   "Go · PostgreSQL · React · OpenAPI · Docker",
   "2026",
   [
-    - Designed, shipped and operate a production web app: a React SPA compiled into a single Go binary
+    - Designed, shipped and operate a production web app on my own server: a React SPA in a single Go binary
     - Contract-first API — one OpenAPI spec generates the Go server interface and the typed TS client
     - OAuth2, local accounts and TOTP 2FA; CI-gated merges, staging and production deploy pipelines
   ]
@@ -18,7 +18,7 @@
   "Prometheus · Grafana · Docker Compose",
   "2026",
   [
-    - Application, host and per-container metrics for the service above, on 30-day retention
+    - Metrics for Quest Board, its host and every container in the homelab, on 30-day retention
     - Dashboards and alert rules provisioned as code — a new service ships already monitored
     - Grafana published through Cloudflare Access; Prometheus and exporters never publicly exposed
   ]
