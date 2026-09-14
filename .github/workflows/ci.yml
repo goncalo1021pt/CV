@@ -1,0 +1,55 @@
+# Builds the CV in the same container developers use locally, so a PDF that
+# compiles here compiles everywhere. The checks live in scripts/build.sh rather
+# than in this file, which keeps `make build` and CI honest about running the
+# same thing.
+name: CV
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build and verify
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
+      - name: Set up Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build the image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          load: true
+          tags: cv-builder:ci
+          # Without a cache every run re-downloads the fonts and the Typst
+          # release, which dominates the job's runtime.
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Compile and verify
+        run: |
+          docker run --rm \
+            --user "$(id -u):$(id -g)" \
+            --volume "$PWD":/cv \
+            --workdir /cv \
+            cv-builder:ci scripts/build.sh
+
+      - name: Upload the PDF
+        uses: actions/upload-artifact@v4
+        # Upload even on failure: seeing the wrong-looking PDF is usually the
+        # fastest way to understand why a check failed.
+        if: always()
+        with:
+          name: cv-pdf
+          path: cv.pdf
+          if-no-files-found: error

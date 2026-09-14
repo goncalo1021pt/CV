@@ -9,8 +9,14 @@
 // ─────────────────────────────────────────────────────────────
 // Font stacks
 // ─────────────────────────────────────────────────────────────
-#let sans  = ("Poppins", "TeX Gyre Heros", "sans-serif")
-#let serif = ("Lora", "Georgia", "serif")
+// Typst has no generic families: every name here must be a real font, and one
+// it cannot resolve raises a warning that the build script treats as an error.
+// So the old `"sans-serif"` / `"serif"` / `"Georgia"` entries never fell back to
+// anything — they only produced noise. Both fallbacks below ship in the build
+// image, so the stacks degrade to a real typeface if the first choice ever goes
+// missing.
+#let sans  = ("Poppins", "TeX Gyre Heros")
+#let serif = ("Lora", "TeX Gyre Termes")
 
 // ─────────────────────────────────────────────────────────────
 // Vertical rhythm
