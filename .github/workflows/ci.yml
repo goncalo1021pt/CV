@@ -20,13 +20,13 @@ jobs:
 
     steps:
       - name: Check out
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Set up Buildx
-        uses: docker/setup-buildx-action@v3
+        uses: docker/setup-buildx-action@v4
 
       - name: Build the image
-        uses: docker/build-push-action@v6
+        uses: docker/build-push-action@v7
         with:
           context: .
           load: true
@@ -45,7 +45,7 @@ jobs:
             cv-builder:ci scripts/build.sh
 
       - name: Upload the PDF
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         # Upload even on failure: seeing the wrong-looking PDF is usually the
         # fastest way to understand why a check failed.
         if: always()
