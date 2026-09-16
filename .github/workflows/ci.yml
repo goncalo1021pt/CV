@@ -53,3 +53,60 @@ jobs:
           name: cv-pdf
           path: cv.pdf
           if-no-files-found: error
+
+  notify-site:
+    name: Tell the site there is a new CV
+    needs: build
+    # Only for what actually landed on main, and only once the build above has
+    # vouched for the PDF — the site publishes whatever this job points it at,
+    # so a failed verification must not reach it.
+    #
+    # workflow_dispatch is allowed too, as a way to re-notify the site by hand
+    # if a dispatch is ever lost or the token lapses and needs re-testing. It
+    # is pinned to main for the same reason as the push: a manual run from a
+    # branch would otherwise publish that branch's CV to the live site.
+    if: >-
+      github.ref == 'refs/heads/main' &&
+      (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out
+        uses: actions/checkout@v7
+        with:
+          # Needed to diff against the commit main was on before this push; a
+          # shallow clone would not have it.
+          fetch-depth: 0
+
+      - name: Did cv.pdf change in this push?
+        id: cv
+        run: |
+          before="${{ github.event.before }}"
+
+          # A brand new branch reports an all-zero "before", and a force push
+          # can leave it pointing at something no longer reachable. Either way
+          # the honest answer is "no idea", and the site no-ops when the PDF it
+          # downloads matches what it already has — so guess in that direction.
+          if ! git cat-file -e "${before}^{commit}" 2>/dev/null; then
+            echo "Cannot resolve ${before}; letting the site decide."
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          elif git diff --quiet "$before" "${{ github.sha }}" -- cv.pdf; then
+            echo "cv.pdf untouched."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "cv.pdf changed."
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Dispatch to goncalo1021pt.github.io
+        if: steps.cv.outputs.changed == 'true'
+        env:
+          # GITHUB_TOKEN is scoped to this repo and cannot dispatch into
+          # another one, so this needs a PAT with Contents: write on the site
+          # repo. See the README for how it is provisioned.
+          GH_TOKEN: ${{ secrets.SITE_DISPATCH_TOKEN }}
+        run: |
+          gh api --method POST \
+            repos/goncalo1021pt/goncalo1021pt.github.io/dispatches \
+            --field event_type=cv-updated \
+            --field 'client_payload[sha]=${{ github.sha }}'
