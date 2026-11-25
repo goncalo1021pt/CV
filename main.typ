@@ -49,7 +49,7 @@
 #par(leading: 0.74em)[
   #text(size: 9.6pt, fill: dim)[
     Systems developer working in C on the packet path of telecom gateways — raw-socket diagnostics, kernel
-    modules in the receive path, netlink routing. Also ships and runs a production Go service on a home server.
+    modules in the receive path, netlink routing. Also runs a production Go service with its own API and MCP server.
   ]
 ]
 

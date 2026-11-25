@@ -21,7 +21,6 @@
   "42 Lisboa",
   "Jul 2024 - Oct 2024 · Lisbon, Portugal",
   [
-    - Reviewed and evaluated C and systems programming projects against specification
-    - Delivered technical presentations to audiences of 100+ students
+    - Reviewed C and systems projects against spec and gave technical talks to 100+ students
   ]
 )

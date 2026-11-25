@@ -10,7 +10,6 @@
   "Systems & Kernel Specialisation · RNCP Level 7 (Master's equivalent)",
   "Oct 2023 - Present · Lisbon, Portugal",
   [
-    - Common core followed by a post-core specialisation, both assessed entirely through projects
-    - Network protocol implementation, memory allocators, x86-64 assembly and a cybersecurity track
+    - Assessed entirely through projects: network protocols, memory allocators, x86-64 assembly, security
   ]
 )
