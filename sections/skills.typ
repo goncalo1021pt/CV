@@ -16,6 +16,6 @@
   ..skill("Networking",    [Raw sockets, TCP/IP, ICMP, netlink/libnl, MQTT, packet analysis (Wireshark, tcpdump)]),
   ..skill("Linux",         [Kernel modules, network stack, syscalls, signals, threads, memory management, cross-compilation]),
   ..skill("Observability", [Prometheus, Grafana, metrics instrumentation, alerting as code]),
-  ..skill("Backend",       [Go (chi, sqlc, pgx), PostgreSQL, REST and OpenAPI, OAuth2/JWT/TOTP]),
+  ..skill("Backend",       [Go (chi, sqlc, pgx), PostgreSQL, REST and OpenAPI, MCP, webhooks, OAuth2/JWT/TOTP]),
   ..skill("Infrastructure",[Docker, Docker Compose, GitHub Actions CI/CD, NGINX, Make, Git, GDB, Valgrind]),
 )
